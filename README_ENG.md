@@ -49,7 +49,7 @@ OPENROUTER_API_KEY=your_api_key_here
 
 # Optional with defaults
 DEFAULT_CONTEXT_SIZE=3
-DEFAULT_MODEL=google/gemini-2.0-flash-001
+DEFAULT_MODEL=google/gemini-2.0-pro-exp-02-05:free
 DEFAULT_LANGUAGE=Korean
 API_URL=https://openrouter.ai/api/v1/chat/completions
 
@@ -93,7 +93,7 @@ These settings can also be overridden via command-line arguments.
 ### Command-line Options
 
 - `--language`, `-l`: Target language for translation (default: from .env or Korean)
-- `--model`, `-m`: LLM model to use (default: from .env or google/gemini-2.0-flash-001)
+- `--model`, `-m`: LLM model to use (default: from .env or google/gemini-2.0-pro-exp-02-05:free)
 - `--context`, `-c`: Number of previous paragraphs to include for context (default: from .env or 3)
 - `--output`, `-o`: Output file path (default: print to stdout)
 

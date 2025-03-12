@@ -49,7 +49,7 @@ OPENROUTER_API_KEY=your_api_key_here
 
 # 기본값이 있는 선택적 설정
 DEFAULT_CONTEXT_SIZE=3
-DEFAULT_MODEL=google/gemini-2.0-flash-001
+DEFAULT_MODEL=google/gemini-2.0-pro-exp-02-05:free
 DEFAULT_LANGUAGE=Korean
 API_URL=https://openrouter.ai/api/v1/chat/completions
 
@@ -93,7 +93,7 @@ INSTRUCTION_4=Keep academic or technical terms in English.
 ### 명령줄 옵션
 
 - `--language`, `-l`: 번역 대상 언어 (기본값: .env 파일 또는 Korean)
-- `--model`, `-m`: 사용할 LLM 모델 (기본값: .env 파일 또는 google/gemini-2.0-flash-001)
+- `--model`, `-m`: 사용할 LLM 모델 (기본값: .env 파일 또는 google/gemini-2.0-pro-exp-02-05:free)
 - `--context`, `-c`: 컨텍스트로 포함할 이전 단락 수 (기본값: .env 파일 또는 3)
 - `--output`, `-o`: 출력 파일 경로 (기본값: 표준 출력에 출력)
 
