@@ -20,17 +20,9 @@ load_dotenv()
 
 # Load constants from environment variables with fallback defaults
 DEFAULT_CONTEXT_SIZE = int(os.getenv("DEFAULT_CONTEXT_SIZE", 3))
-DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "google/gemini-2.0-flash-001")
-DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE", "Korean")
-API_URL = os.getenv("API_URL", "https://openrouter.ai/api/v1/chat/completions")
-
-# Default instructions if not specified in environment variables
-DEFAULT_INSTRUCTIONS = [
-    "**Preserve Markdown/LaTeX syntax.** Do not alter any formatting symbols (e.g., `**bold**`, `_italics_`, `\\LaTeX` commands, headers, links, etc.).",
-    "**No summarization.** Provide a direct translation of the paragraph without omission or addition.",
-    "**Retain paragraph structure.** Don't merge or split sentences if not necessary.",
-    "**Keep academic or technical terms in English** (even if the source text is in another language)."
-]
+DEFAULT_MODEL = os.getenv("DEFAULT_MODEL")
+DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE")
+API_URL = os.getenv("API_URL")
 
 def get_api_key() -> str:
     """
@@ -72,11 +64,7 @@ def get_instructions() -> List[str]:
             instructions.append(instruction)
         
         i += 1
-    
-    # If no instructions found in environment variables, use defaults
-    if not instructions:
-        return DEFAULT_INSTRUCTIONS
-    
+
     return instructions
 
 def split_text_into_paragraphs(text: str) -> List[str]:
